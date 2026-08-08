@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SATYX — premium custom T-shirt printing and merchandise.">
+  <title>SATYX — Wear Your Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">CUSTOM PRINTING • BULK ORDERS • PREMIUM QUALITY</div>
+
+  <header class="nav">
+    <a class="logo" href="#home">SATYX<span>®</span></a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#custom">Custom</a>
+      <a href="#bulk">Bulk Orders</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="nav-cta" href="#custom">Start Designing <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">CUSTOM MERCH • MADE FOR YOU</p>
+        <h1>WEAR YOUR<br><em>IDENTITY.</em></h1>
+        <p class="hero-text">Premium T-shirt imprinting for people, teams, creators, events and brands. Your idea. Our print. One statement.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#custom">Create Your Tee <span>↗</span></a>
+          <a class="btn ghost" href="#shop">Explore Collection</a>
+        </div>
+        <div class="trust-row">
+          <div><strong>01</strong><span>Upload<br>your design</span></div>
+          <div><strong>02</strong><span>Choose<br>your tee</span></div>
+          <div><strong>03</strong><span>We print<br>& deliver</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="shirt-card">
+          <div class="shirt">
+            <div class="sleeve left"></div><div class="sleeve right"></div>
+            <div class="neck"></div>
+            <div class="shirt-print">S<br>A<br>T<br>Y<br>X</div>
+          </div>
+          <div class="floating-tag tag-one">PREMIUM<br><b>PRINTS</b></div>
+          <div class="floating-tag tag-two">EST.<br><b>2026</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee"><div>CREATE • PRINT • WEAR • REPEAT • CREATE • PRINT • WEAR • REPEAT •</div></section>
+
+    <section class="section" id="shop">
+      <div class="section-head">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Made to be <em>noticed.</em></h2></div>
+        <a class="text-link" href="#custom">Need something custom? ↗</a>
+      </div>
+      <div class="products">
+        <article class="product">
+          <div class="product-image black"><span>SATYX</span><small>CORE / 01</small></div>
+          <div class="product-info"><div><h3>Core Black Tee</h3><p>Heavyweight cotton</p></div><strong>₹499</strong></div>
+        </article>
+        <article class="product">
+          <div class="product-image white"><span>MAKE<br>YOUR<br>MOVE</span><small>STATEMENT / 02</small></div>
+          <div class="product-info"><div><h3>Statement Tee</h3><p>Premium cotton</p></div><strong>₹549</strong></div>
+        </article>
+        <article class="product">
+          <div class="product-image lime"><span>NO<br>LIMITS.</span><small>ENERGY / 03</small></div>
+          <div class="product-info"><div><h3>Energy Tee</h3><p>Soft-touch cotton</p></div><strong>₹549</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="custom section" id="custom">
+      <div class="custom-intro">
+        <p class="eyebrow">YOUR DESIGN. YOUR RULES.</p>
+        <h2>Turn an idea<br>into something<br><em>you can wear.</em></h2>
+        <p>Send us your artwork, logo, artwork concept or even a rough idea. We'll help turn it into a clean, print-ready T-shirt.</p>
+        <div class="mini-features"><span>✓ Premium blanks</span><span>✓ Quality printing</span><span>✓ Small & bulk orders</span></div>
+      </div>
+      <form class="order-form" id="orderForm">
+        <div class="form-top"><span>START A CUSTOM ORDER</span><span>01 / 05</span></div>
+        <label>Your name<input required name="name" placeholder="e.g. Satyam"></label>
+        <label>Phone / WhatsApp<input required name="phone" placeholder="+91 XXXXX XXXXX"></label>
+        <div class="two">
+          <label>Quantity<input required type="number" min="1" name="quantity" placeholder="10"></label>
+          <label>T-shirt color<select name="color"><option>Black</option><option>White</option><option>Oversized Black</option><option>Custom</option></select></label>
+        </div>
+        <label>Tell us about your design<textarea name="details" rows="3" placeholder="Front/back print, text, logo, occasion..."></textarea></label>
+        <label class="upload">
+          <input type="file" id="designFile" accept="image/*,.pdf">
+          <span class="upload-icon">↑</span>
+          <span><b id="fileName">Upload your design</b><small>PNG, JPG or PDF</small></span>
+        </label>
+        <button class="btn primary full" type="submit">Request a Quote <span>↗</span></button>
+        <p class="form-note">No payment required. We'll contact you to confirm the design, price and delivery.</p>
+      </form>
+    </section>
+
+    <section class="bulk section" id="bulk">
+      <div class="bulk-box">
+        <div><p class="eyebrow">FOR TEAMS & EVENTS</p><h2>Need <em>20+ tees?</em></h2><p>School events, college societies, sports teams, creator merch, company events or your own brand — SATYX handles bulk printing.</p></div>
+        <a class="btn light" href="#custom">Get Bulk Quote ↗</a>
+      </div>
+    </section>
+
+    <section class="process section">
+      <div class="section-head"><div><p class="eyebrow">HOW IT WORKS</p><h2>Simple. <em>Fast.</em> Yours.</h2></div></div>
+      <div class="steps">
+        <div><span>01</span><h3>Share your idea</h3><p>Upload your design or tell us what you want printed.</p></div>
+        <div><span>02</span><h3>Approve the mockup</h3><p>We confirm the placement, size, garment and final price.</p></div>
+        <div><span>03</span><h3>We print it</h3><p>Your order goes into production after confirmation.</p></div>
+        <div><span>04</span><h3>Wear it</h3><p>Collect or receive your finished SATYX order.</p></div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-number">S</div>
+      <div><p class="eyebrow">ABOUT SATYX</p><h2>Not just a<br>T-shirt.</h2><p>SATYX is a young custom-merch brand built around one idea: what you wear should feel like you. We're starting with T-shirt imprinting and building toward a complete custom merchandise experience.</p><a class="text-link" href="#custom">Make something with us ↗</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main"><div class="logo">SATYX<span>®</span></div><p>Wear your identity.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#custom">Custom</a><a href="#bulk">Bulk</a><a href="#about">About</a></div></div>
+    <div class="footer-bottom"><span>© 2026 SATYX. All rights reserved.</span><span>Made for people who stand out.</span></div>
+  </footer>
+
+  <div class="toast" id="toast">Opening WhatsApp with your order details…</div>
+  <script src="script.js"></script>
+</body>
+</html>
