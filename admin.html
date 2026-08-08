@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SATYX Admin</title><link rel="stylesheet" href="frontend/style.css"></head>
+<body><main class="page"><div class="container">
+<div class="box form"><div class="eyebrow">PRIVATE AREA</div><h1>ADMIN.</h1>
+<form id="login"><label>Email</label><input name="email" type="email" required>
+<label>Password</label><input name="password" type="password" required><button class="btn red">Sign in</button></form></div>
+<div id="dash" class="box" style="display:none"><h2>SATYX Dashboard</h2>
+<p id="stats"></p><h3>Customers</h3><div id="customers"></div><h3>Orders</h3><div id="orders"></div></div>
+</div></main>
+<script>
+const API="http://localhost:8000/api";
+document.querySelector("#login").addEventListener("submit",async e=>{
+e.preventDefault();const body=Object.fromEntries(new FormData(e.target));
+const r=await fetch(API+"/admin/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+const j=await r.json();if(!r.ok)return alert(j.detail||"Login failed");
+localStorage.adminToken=j.token;load();
+});
+async function load(){const h={Authorization:"Bearer "+localStorage.adminToken};
+const [c,o]=await Promise.all([fetch(API+"/admin/customers",{headers:h}),fetch(API+"/admin/orders",{headers:h})]);
+if(!c.ok||!o.ok)return alert("Admin session expired");
+const customers=await c.json(),orders=await o.json();
+document.querySelector("#login").parentElement.style.display="none";
+document.querySelector("#dash").style.display="block";
+document.querySelector("#stats").textContent=`${customers.length} customers • ${orders.length} orders`;
+document.querySelector("#customers").innerHTML=customers.map(x=>`<p>${x.name} — ${x.email} — ${x.mobile}</p>`).join("");
+document.querySelector("#orders").innerHTML=orders.map(x=>`<p>${x.id} — ${x.customer?.name||""} — ₹${x.total} — ${x.status}</p>`).join("");
+}
+if(localStorage.adminToken)load();
+</script></body></html>
