@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
   const fileText = file.files.length ? file.files[0].name : 'No file attached';
 
   // Replace this number with your SATYX WhatsApp business number.
-  const whatsappNumber = '919999999999';
+  const whatsappNumber = '919953010972';
 
   const message =
 `Hi SATYX! I want to place a custom T-shirt enquiry.
