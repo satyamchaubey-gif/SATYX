@@ -38,7 +38,24 @@ const PRODUCTS=[
 ];
 let cart=JSON.parse(localStorage.satyxCart||"[]"),user=JSON.parse(localStorage.satyxUser||"null");
 const $=x=>document.querySelector(x), money=x=>"₹"+x.toLocaleString("en-IN");
-function image(p){let t=p.id==1?"SATYX":p.id==2?"IDENTITY":p.id==3?"NO LIMITS":"AFTER DARK";return `<div class="pic ${p.c}"><div class="shirt">${t}</div><span class="badge">${p.tag}</span></div>`}
+function image(p){function image(p) {
+
+    const productImages = {
+        "arc-core": "WhatsApp Image 2026-08-08 at 8.10.01 PM.jpeg",
+        "multiverse": "WhatsApp Image 2026-08-08 at 8.14.23 PM.jpeg",
+        "hero-code": "WhatsApp Image 2026-08-08 at 8.14.29 PM.jpeg"
+    };
+
+    if (productImages[p.c]) {
+        return `
+            <div class="pic ${p.c}">
+                <img src="${productImages[p.c]}" alt="${p.n}">
+                <span class="badge">${p.tag}</span>
+            </div>
+        `;
+    }
+let t=p.id==1?"SATYX":p.id==2?"IDENTITY":p.id==3?"NO LIMITS":"AFTER DARK";return `<div class="pic ${p.c}"><div class="shirt">${t}</div><span class="badge">${p.tag}</span></div>`}
+}
 function card(p){return `<a class="card" href="product.html?id=${p.id}">${image(p)}<div class="info"><div class="name">${p.n}</div><div class="price">${money(p.p)} <span class="old">${money(p.o)}</span><span class="off">${Math.round((1-p.p/p.o)*100)}% OFF</span></div><div class="meta">Drop 001 · ${p.cat.includes("oversized")?"Oversized Fit":"Everyday Fit"}</div></div></a>`}
 function save(){localStorage.satyxCart=JSON.stringify(cart);document.querySelectorAll("#count").forEach(x=>x.textContent=cart.reduce((a,b)=>a+b.q,0))}
 function toast(s){let t=$("#toast");if(!t)return;t.textContent=s;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
