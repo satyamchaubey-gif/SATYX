@@ -3,6 +3,38 @@ const PRODUCTS=[
 {id:2,n:"Identity Oversized Tee",p:899,o:1199,c:"",tag:"NEW",cat:["tee","oversized","drop"],d:"A statement graphic piece designed for everyday wear."},
 {id:3,n:"No Limits Tee",p:849,o:1099,c:"lime",tag:"LIMITED",cat:["tee","drop"],d:"Bold energy from Drop 001. Designed to stand out."},
 {id:4,n:"After Dark Tee",p:899,o:1199,c:"blue",tag:"NEW",cat:["tee","oversized"],d:"Dark tones, clean attitude and a relaxed silhouette."}
+  {
+    id: 5,
+    n: "ARC Core Oversized Tee",
+    p: 899,
+    o: 1199,
+    c: "arc-core",
+    tag: "DROP 001",
+    cat: ["tee", "oversized", "drop"],
+    d: "Power Within. An oversized statement tee featuring the Arc Core graphic."
+},
+
+{
+    id: 6,
+    n: "Multiverse Oversized Tee",
+    p: 899,
+    o: 1199,
+    c: "multiverse",
+    tag: "DROP 001",
+    cat: ["tee", "oversized", "drop"],
+    d: "Different realities. Same purpose. A cosmic SATYX statement piece."
+},
+
+{
+    id: 7,
+    n: "Hero Code Oversized Tee",
+    p: 899,
+    o: 1199,
+    c: "hero-code",
+    tag: "DROP 001",
+    cat: ["tee", "oversized", "drop"],
+    d: "Code. Discipline. Focus. Purpose. The Hero Code from SATYX Drop 001."
+}
 ];
 let cart=JSON.parse(localStorage.satyxCart||"[]"),user=JSON.parse(localStorage.satyxUser||"null");
 const $=x=>document.querySelector(x), money=x=>"₹"+x.toLocaleString("en-IN");
