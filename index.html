@@ -1,110 +1,111 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SATYX — Built Different</title><link rel="stylesheet" href="style.css">
-</head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SATYX | Independent Premium Streetwear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="topbar">Free shipping on orders above ₹1,499 • Drop 001 now live</div>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="SATYX home"><img src="satyx-logo.png" alt="SATYX"></a>
-    <button class="menu" aria-label="Open menu">☰</button>
-    <nav class="navlinks">
-      <a href="shop.html">Shop</a>
-      <a href="drop-001.html">Drop 001</a>
-      <a href="about.html">About</a>
-      <a href="account.html">Account</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="nav-action" href="shop.html">New</a>
-      <a class="nav-action" href="cart.html">Cart <span class="cart-pill" data-cart-count>0</span></a>
-    </div>
-  </div>
-</header>
-
-<main>
-<section class="hero">
-  <div class="container hero-copy">
-    <div class="kicker">SATYX / DROP 001</div>
-    <h1>BUILT<br><span>DIFFERENT.</span></h1>
-    <p>Original graphics. Oversized silhouettes. A new independent streetwear label built around identity, energy and the freedom to stand apart.</p>
-    <div class="hero-cta">
-      <a class="btn" href="drop-001.html">Shop Drop 001 →</a>
-      <a class="btn dark" href="shop.html">Explore collection</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <img src="assets/satyx-logo.png" alt="SATYX logo artwork">
-    <div class="hero-badge">THE MULTIVERSE COLLECTION / 001</div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">THE FIRST DROP</div><h2>Pick your reality.</h2></div>
-      <p class="section-sub">Three original tees from Drop 001. Choose the graphic that feels like you.</p>
-    </div>
-    <div class="products" id="home-products"></div>
-  </div>
-</section>
-
-<section class="lookbook section">
-  <div class="container">
-    <div class="section-head">
-      <div><div class="eyebrow">DROP 001</div><h2>The Multiverse Collection.</h2></div>
-      <p class="section-sub">A visual look at the collection. Four concepts, one SATYX identity.</p>
-    </div>
-    <img src="assets/drop-001-lookbook.png" alt="SATYX Drop 001 lookbook">
-  </div>
-</section>
-
-<section class="section">
-  <div class="container split">
-    <div class="feature redline">
-      <div class="eyebrow">01 / ARC CORE</div>
-      <h3>POWER WITHIN.</h3>
-      <p>An energy-core graphic representing potential, pressure and the moment you switch yourself on.</p>
-      <a class="btn dark" href="product.html?id=1">View Arc Core →</a>
-    </div>
-    <div class="feature">
-      <div class="eyebrow">02 / MULTIVERSE</div>
-      <h3>DIFFERENT REALITIES.</h3>
-      <p>One mind. Infinite possibilities. A cosmic graphic for anyone who refuses to stay inside one version of themselves.</p>
-      <a class="btn dark" href="product.html?id=2">View Multiverse →</a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/satyx-logo.png" alt="SATYX">
-        <p>Built different. SATYX is an independent streetwear label focused on bold graphics, limited drops and everyday oversized silhouettes.</p>
-      </div>
-      <div>
-        <h4>Shop</h4>
-        <a href="shop.html">All products</a>
-        <a href="drop-001.html">Drop 001</a>
-        <a href="cart.html">Cart</a>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <a href="account.html">Account</a>
-        <a href="about.html">About SATYX</a>
-        <a href="checkout.html">Checkout</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:hello@satyx.in">hello@satyx.in</a>
-        <p>Orders, sizing and support will be connected here when you launch your production backend.</p>
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="satyx-logo.png" alt="SATYX" class="brand-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="brand-logo-text" style="display:none;">SATYX</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="shop.html" class="nav-link">SHOP</a></li>
+        <li><a href="drop-001.html" class="nav-link">DROP 001</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="account.html" class="nav-link">ACCOUNT</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon-wrapper nav-link">
+          CART [<span id="cart-badge-count">0</span>]
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span><span></span>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 SATYX. All rights reserved.</span><span>DROP 001 / BUILT DIFFERENT.</span></div>
-  </div>
-</footer>
-<div id="toast" class="toast"></div>
+  </header>
 
-<script src="script.js"></script></body></html>
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="hero-subtitle text-mono">SYSTEM RELEASE / DROP 001</p>
+        <h1 class="heading-xl hero-title">ARCHITECTURAL<br>STREETWEAR</h1>
+        <p class="hero-description">Precision engineered silhouette design. High-density textile construction. Designed and crafted independently under the SATYX label.</p>
+        <a href="drop-001.html" class="btn btn-accent">EXPLORE DROP 001</a>
+      </div>
+    </section>
+
+    <section class="section-spacing container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: 3rem;">
+        <div>
+          <p class="text-mono" style="color:var(--accent-red)">CURATED SELECTION</p>
+          <h2 class="heading-lg">FEATURED PIECES</h2>
+        </div>
+        <a href="shop.html" class="btn btn-outline">VIEW ALL ITEMS</a>
+      </div>
+      <div class="grid-3" id="featured-products-grid">
+        <!-- Injected Dynamically -->
+      </div>
+    </section>
+
+    <section class="section-spacing" style="background-color: var(--bg-surface); border-top:1px solid var(--bg-border); border-bottom:1px solid var(--bg-border);">
+      <div class="container grid-2" style="align-items:center;">
+        <div>
+          <p class="text-mono" style="color:var(--accent-red);">MANIFESTO</p>
+          <h2 class="heading-lg" style="margin-bottom:1.5rem;">WE DO NOT PRINT ON BLANKS.</h2>
+          <p style="color:var(--text-muted); margin-bottom:1.5rem;">SATYX is an independent design entity. Every garment features custom tailored fitting, heavyweight combed cotton, and proprietary graphic aesthetics.</p>
+          <a href="about.html" class="btn btn-primary">OUR PHILOSOPHY</a>
+        </div>
+        <div>
+          <img src="multiverse.jpg" alt="SATYX Design Studio" style="border:1px solid var(--bg-border);">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-logo-text">SATYX</span>
+          <p>Independent premium streetwear brand based in India.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">NAVIGATION</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html" class="footer-link">Shop All</a></li>
+            <li><a href="drop-001.html" class="footer-link">Drop 001</a></li>
+            <li><a href="about.html" class="footer-link">Brand Story</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">CUSTOMER CARE</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">Order Tracking</a></li>
+            <li><a href="about.html" class="footer-link">Shipping Policy</a></li>
+            <li><a href="about.html" class="footer-link">Returns & Exchange</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">SYSTEM</h4>
+          <ul class="footer-links">
+            <li><a href="admin.html" class="footer-link">Admin Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SATYX CLOTHING CO. ALL RIGHTS RESERVED.</p>
+        <p class="text-mono">DESIGNED FOR THE UNCONVENTIONAL</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
