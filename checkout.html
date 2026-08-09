@@ -1,79 +1,74 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Checkout — SATYX</title><link rel="stylesheet" href="style.css"></head><body>
-
-<div class="topbar">Free shipping on orders above ₹1,499 • Drop 001 now live</div>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="SATYX home"><img src="satyx-logo.png" alt="SATYX"></a>
-    <button class="menu" aria-label="Open menu">☰</button>
-    <nav class="navlinks">
-      <a href="shop.html">Shop</a>
-      <a href="drop-001.html">Drop 001</a>
-      <a href="about.html">About</a>
-      <a href="account.html">Account</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="nav-action" href="shop.html">New</a>
-      <a class="nav-action" href="cart.html">Cart <span class="cart-pill" data-cart-count>0</span></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHECKOUT | SATYX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand"><span class="brand-logo-text">SATYX</span></a>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-<section class="page-hero"><div class="container"><div class="eyebrow">SECURE CHECKOUT</div><h1>CHECKOUT.</h1><p class="section-sub">Enter your delivery details and place your SATYX order.</p></div></section>
-<section class="form-page">
-<div class="container form-layout">
-  <form id="checkout-form" class="form-card">
-    <h3>Delivery details</h3>
-    <label>Full name</label><input name="name" required>
-    <label>Email</label><input name="email" type="email" required>
-    <label>Phone</label><input name="phone" required>
-    <label>Address</label><textarea name="address" required></textarea>
-    <label>City</label><input name="city" required>
-    <label>PIN code</label><input name="pincode" inputmode="numeric" required>
-    <label>Payment</label>
-    <select name="payment"><option>Cash on Delivery</option><option>UPI / Online Payment — connect gateway later</option></select>
-    <div class="notice" style="margin-top:16px">This starter store records the order in the browser. Connect Razorpay/Stripe and a backend before accepting real online payments.</div>
-    <div class="form-actions"><button class="btn red" type="submit">Place order →</button><a class="btn dark" href="cart.html">Back to cart</a></div>
-  </form>
-  <aside class="summary" id="checkout-summary"></aside>
-  <div id="order-success" class="form-card full hidden">
-    <div class="eyebrow">ORDER CONFIRMED</div><h3>You're in.</h3>
-    <p>Your SATYX order has been saved. Order ID: <strong id="order-id"></strong></p>
-    <p class="section-sub">For a real launch, connect this flow to your payment gateway, database and order notification system.</p>
-    <a class="btn" href="shop.html">Continue shopping →</a>
-  </div>
-</div>
-</section>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="satyx-logo.png" alt="SATYX">
-        <p>Built different. SATYX is an independent streetwear label focused on bold graphics, limited drops and everyday oversized silhouettes.</p>
-      </div>
+  <main class="container section-spacing">
+    <h1 class="heading-xl" style="margin-bottom:2rem;">CHECKOUT</h1>
+    <form id="checkout-form" class="grid-2">
       <div>
-        <h4>Shop</h4>
-        <a href="shop.html">All products</a>
-        <a href="drop-001.html">Drop 001</a>
-        <a href="cart.html">Cart</a>
+        <h3 class="heading-md" style="margin-bottom:1.5rem;">SHIPPING DETAILS</h3>
+        <div class="form-group">
+          <label class="form-label">FULL NAME</label>
+          <input type="text" id="c-name" class="form-input" required>
+        </div>
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label">EMAIL ADDRESS</label>
+            <input type="email" id="c-email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">MOBILE NUMBER</label>
+            <input type="tel" id="c-mobile" class="form-input" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">DELIVERY ADDRESS</label>
+          <input type="text" id="c-address" class="form-input" required>
+        </div>
+        <div class="grid-3">
+          <div class="form-group">
+            <label class="form-label">CITY</label>
+            <input type="text" id="c-city" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">STATE</label>
+            <input type="text" id="c-state" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">PINCODE</label>
+            <input type="text" id="c-pincode" class="form-input" required>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4>Help</h4>
-        <a href="account.html">Account</a>
-        <a href="about.html">About SATYX</a>
-        <a href="checkout.html">Checkout</a>
+
+      <div style="background-color: var(--bg-surface); padding:2rem; border:1px solid var(--bg-border); height:fit-content;">
+        <h3 class="heading-md" style="margin-bottom:1.5rem;">PAYMENT METHOD</h3>
+        <div class="form-group">
+          <select id="c-payment" class="form-select">
+            <option value="COD">CASH ON DELIVERY (COD)</option>
+            <option value="ONLINE">ONLINE PAYMENT (UPI/CARDS) - GATEWAY READY</option>
+          </select>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin:2rem 0; font-weight:700; border-top:1px solid var(--bg-border); padding-top:1rem;">
+          <span>FINAL AMOUNT</span>
+          <span id="checkout-total">₹0</span>
+        </div>
+        <button type="submit" class="btn btn-accent btn-full">PLACE ORDER</button>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:hello@satyx.in">hello@satyx.in</a>
-        <p>Orders, sizing and support will be connected here when you launch your production backend.</p>
-      </div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 SATYX. All rights reserved.</span><span>DROP 001 / BUILT DIFFERENT.</span></div>
-  </div>
-</footer>
-<div id="toast" class="toast"></div>
-<script src="script.js"></script></body></html>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
