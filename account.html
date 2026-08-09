@@ -1,78 +1,93 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Account — SATYX</title><link rel="stylesheet" href="style.css"></head><body>
-
-<div class="topbar">Free shipping on orders above ₹1,499 • Drop 001 now live</div>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="SATYX home"><img src="satyx-logo.png" alt="SATYX"></a>
-    <button class="menu" aria-label="Open menu">☰</button>
-    <nav class="navlinks">
-      <a href="shop.html">Shop</a>
-      <a href="drop-001.html">Drop 001</a>
-      <a href="about.html">About</a>
-      <a href="account.html">Account</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="nav-action" href="shop.html">New</a>
-      <a class="nav-action" href="cart.html">Cart <span class="cart-pill" data-cart-count>0</span></a>
-    </div>
-  </div>
-</header>
-
-<main>
-<section class="page-hero"><div class="container"><div class="eyebrow">SATYX CUSTOMER</div><h1>ACCOUNT.</h1><p class="section-sub">Save your details for faster checkout and keep your SATYX profile on this device.</p></div></section>
-<section class="form-page"><div class="container" style="max-width:650px">
-  <div id="logged-in" class="form-card hidden">
-    <div class="eyebrow">SIGNED IN</div><h3 id="account-name"></h3><p id="account-email" class="section-sub"></p>
-    <button class="btn dark" onclick="logout()">Log out</button>
-  </div>
-  <div class="form-card">
-    <div class="account-tabs"><button class="account-tab active" data-mode="login">Login</button><button class="account-tab" data-mode="signup">Create account</button></div>
-    <form id="login-form">
-      <label>Email</label><input name="email" type="email" required>
-      <label>Password</label><input name="password" type="password" required>
-      <div class="form-actions"><button class="btn red">Login</button></div>
-      <p class="section-sub">This starter account is device-local. Add a real authentication provider before launch.</p>
-    </form>
-    <form id="signup-form" class="hidden">
-      <label>Name</label><input name="name" required>
-      <label>Email</label><input name="email" type="email" required>
-      <label>Phone</label><input name="phone">
-      <label>Password</label><input name="password" type="password" required>
-      <div class="form-actions"><button class="btn red">Create account</button></div>
-      <p class="section-sub">Your starter profile is saved in local storage on this browser.</p>
-    </form>
-  </div>
-</div></section>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/satyx-logo.png" alt="SATYX">
-        <p>Built different. SATYX is an independent streetwear label focused on bold graphics, limited drops and everyday oversized silhouettes.</p>
-      </div>
-      <div>
-        <h4>Shop</h4>
-        <a href="shop.html">All products</a>
-        <a href="drop-001.html">Drop 001</a>
-        <a href="cart.html">Cart</a>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <a href="account.html">Account</a>
-        <a href="about.html">About SATYX</a>
-        <a href="checkout.html">Checkout</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:hello@satyx.in">hello@satyx.in</a>
-        <p>Orders, sizing and support will be connected here when you launch your production backend.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACCOUNT | SATYX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand"><span class="brand-logo-text">SATYX</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="shop.html" class="nav-link">SHOP</a></li>
+        <li><a href="drop-001.html" class="nav-link">DROP 001</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="account.html" class="nav-link active">ACCOUNT</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon-wrapper nav-link">CART [<span id="cart-badge-count">0</span>]</a>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 SATYX. All rights reserved.</span><span>DROP 001 / BUILT DIFFERENT.</span></div>
-  </div>
-</footer>
-<div id="toast" class="toast"></div>
-<script src="script.js"></script></body></html>
+  </header>
+
+  <main class="container section-spacing">
+    <div id="account-auth" class="grid-2">
+      <div style="background-color:var(--bg-surface); padding:2rem; border:1px solid var(--bg-border);">
+        <h2 class="heading-md" style="margin-bottom:1.5rem;">SIGN IN</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label class="form-label">EMAIL ADDRESS</label>
+            <input type="email" id="login-email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">PASSWORD</label>
+            <input type="password" id="login-password" class="form-input" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">LOGIN</button>
+        </form>
+      </div>
+
+      <div style="background-color:var(--bg-surface); padding:2rem; border:1px solid var(--bg-border);">
+        <h2 class="heading-md" style="margin-bottom:1.5rem;">REGISTER</h2>
+        <form id="register-form">
+          <div class="form-group">
+            <label class="form-label">FULL NAME</label>
+            <input type="text" id="reg-name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">EMAIL ADDRESS</label>
+            <input type="email" id="reg-email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">MOBILE NUMBER</label>
+            <input type="tel" id="reg-mobile" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">PASSWORD</label>
+            <input type="password" id="reg-password" class="form-input" required>
+          </div>
+          <button type="submit" class="btn btn-accent btn-full">CREATE ACCOUNT</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="account-dashboard" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3rem;">
+        <div>
+          <h1 class="heading-xl">MY ACCOUNT</h1>
+          <p id="user-name-display" style="color:var(--accent-red);" class="text-mono"></p>
+        </div>
+        <button onclick="logoutUser()" class="btn btn-outline">LOGOUT</button>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3 class="heading-md" style="margin-bottom:1.5rem;">ACCOUNT DETAILS</h3>
+          <p class="text-mono">EMAIL: <span id="user-email-display" style="color:var(--text-muted)"></span></p>
+          <p class="text-mono">MOBILE: <span id="user-mobile-display" style="color:var(--text-muted)"></span></p>
+        </div>
+        <div>
+          <h3 class="heading-md" style="margin-bottom:1.5rem;">ORDER HISTORY</h3>
+          <div id="orders-history-container">
+            <!-- Dynamic Order History -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
