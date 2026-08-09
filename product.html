@@ -1,54 +1,62 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Product — SATYX</title><link rel="stylesheet" href="style.css"></head><body>
-
-<div class="topbar">Free shipping on orders above ₹1,499 • Drop 001 now live</div>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="SATYX home"><img src="satyx-logo.png" alt="SATYX"></a>
-    <button class="menu" aria-label="Open menu">☰</button>
-    <nav class="navlinks">
-      <a href="shop.html">Shop</a>
-      <a href="drop-001.html">Drop 001</a>
-      <a href="about.html">About</a>
-      <a href="account.html">Account</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="nav-action" href="shop.html">New</a>
-      <a class="nav-action" href="cart.html">Cart <span class="cart-pill" data-cart-count>0</span></a>
-    </div>
-  </div>
-</header>
-
-<main class="product-page"><div class="container"><div class="product-layout" id="product-detail"></div></div></main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="satyx-logo.png" alt="SATYX">
-        <p>Built different. SATYX is an independent streetwear label focused on bold graphics, limited drops and everyday oversized silhouettes.</p>
-      </div>
-      <div>
-        <h4>Shop</h4>
-        <a href="shop.html">All products</a>
-        <a href="drop-001.html">Drop 001</a>
-        <a href="cart.html">Cart</a>
-      </div>
-      <div>
-        <h4>Help</h4>
-        <a href="account.html">Account</a>
-        <a href="about.html">About SATYX</a>
-        <a href="checkout.html">Checkout</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:hello@satyx.in">hello@satyx.in</a>
-        <p>Orders, sizing and support will be connected here when you launch your production backend.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRODUCT DETAILS | SATYX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand"><span class="brand-logo-text">SATYX</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="shop.html" class="nav-link">SHOP</a></li>
+        <li><a href="drop-001.html" class="nav-link">DROP 001</a></li>
+        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="account.html" class="nav-link">ACCOUNT</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-icon-wrapper nav-link">CART [<span id="cart-badge-count">0</span>]</a>
+        <div class="menu-toggle" id="menu-toggle"><span></span><span></span></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 SATYX. All rights reserved.</span><span>DROP 001 / BUILT DIFFERENT.</span></div>
-  </div>
-</footer>
-<div id="toast" class="toast"></div>
-<script src="script.js"></script></body></html>
+  </header>
+
+  <main class="container section-spacing" id="product-container">
+    <div class="grid-2">
+      <div>
+        <img id="p-img" src="" alt="Product Image" style="width:100%; border: 1px solid var(--bg-border);">
+      </div>
+      <div>
+        <p class="text-mono" id="p-collection" style="color:var(--accent-red); margin-bottom: 0.5rem;"></p>
+        <h1 class="heading-lg" id="p-name" style="margin-bottom: 1rem;"></h1>
+        <div style="display:flex; align-items:center; gap: 1rem; margin-bottom: 1.5rem;">
+          <span class="heading-md" id="p-price"></span>
+          <span id="p-mrp" class="price-mrp" style="font-size: 1.1rem;"></span>
+        </div>
+        <p id="p-desc" style="color:var(--text-muted); margin-bottom: 2rem;"></p>
+
+        <div style="margin-bottom: 2rem;">
+          <label class="form-label">SELECT SIZE</label>
+          <div id="size-selector" style="display:flex; gap:1rem;">
+            <!-- Dynamic Sizes -->
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; margin-bottom: 3rem;">
+          <button id="add-cart-btn" class="btn btn-outline" style="flex:1;">ADD TO CART</button>
+          <button id="buy-now-btn" class="btn btn-accent" style="flex:1;">BUY NOW</button>
+        </div>
+
+        <div style="border-top:1px solid var(--bg-border); padding-top:1.5rem;">
+          <h4 class="text-mono" style="margin-bottom:0.5rem;">SHIPPING & RETURNS</h4>
+          <p style="color:var(--text-muted); font-size:0.85rem;">Standard shipping 3-5 business days across India. Free shipping on orders over ₹2000. 7-day hassle-free exchange policy.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
